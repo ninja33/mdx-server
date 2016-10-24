@@ -6,7 +6,7 @@ It is just a combination of [mdict-query](https://github.com/mmjang/mdict-query)
 
 Usage:
 
-1. Run mdx_server.py under Python 3.5 environment. When it shows a dialoge window to ask for mdx file, you may select a mdx file located in your disk. After it displayed `port:8000` in console window, the service is running at beackground.
+1. Run `mdx_server.py` under Python 3.5 environment. When it shows a dialoge window to ask for mdx file, you may select a mdx file located in your disk. After it displayed `port:8000` in console window, the service is running at beackground.
 2. Open your browser and input http://localhost:8000/{word} (the {word} is the English word you want to query.), then the definition of that word will be displayed accoding to which dictionary(mdx file) you selected in above step 1.
 
 Please check with the [manual](manual/mdx-server%20manual.pdf) for more detail and screenshot
