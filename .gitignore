@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# MDX, MDD and index DB
+*.mdx
+*.mdd
+*.db
+
 # C extensions
 *.so
 
