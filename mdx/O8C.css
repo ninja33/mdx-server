@@ -1,0 +1,423 @@
+body{font-family:"Nimbus Sans L",Helvetica,arial,"Lucida Grande","Lucida Sans Unicode", sans-serif;Line-height:1.3em;color:#555555;background-color:#F9F9F9;}
+
+main {margin:0;padding:0;color:#555555;clear:both;background-color:#FAFAFA;}
+
+.fayin {display:inline;}
+
+img.fayin {width:15px;height:15px;}
+
+img {border: 0; max-width:700px}
+img.img {width:1em;height:1em;margin-left:-4px;margin-bottom:-2px;} /*Chinese chara*/
+
+.h-g .top-g .h {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.id-g {display:inline;}
+.revout + .id-g, .z + .pv-g {display:block; margin-top:-10px}
+.ids-g {margin-bottom:10px;}
+.h-g .top-g .vs-g .v{
+    font-weight: bold;
+}
+span.arbd1, span.dhb, span.fm, span.unei, .ndv, .cl, .ei, .ndv  {font-weight:bold;padding-right:5px;}
+
+span.unsyn, span.unfm, .eb  {font-weight:bold;padding-right:5px;text-transform:uppercase;font-size:smaller; color:#C76E06;} 
+
+.ungi, .gi, .g  {color:purple; padding-right:5px;}
+
+.label-g .r  {color:green;}
+.dr-g {display:block;}
+ 
+/*词类*/
+.pos{
+	text-align: left;
+    font-weight: bold;
+}
+.pos-g .pos{
+    display: table-cell; 
+    margin: 0px auto 0px auto; 
+	background-color: #8f0610;
+	color: #FAFAFA;
+	text-transform:uppercase;
+	font-size:smaller;
+	padding: 1px 3px 1px 3px;
+	border-radius: 5px;
+}
+.pos-g .z, .pos-g img, .pos-g .symbols-small_coresym{display:none;}
+
+/*音标*/
+.phon-gb, .phon-us{
+ color: #004aac;
+}
+
+.z_phon-us{
+    color: #8f0610;
+    font-style: italic;
+    margin-right: .1em;
+}
+
+/*相关单词*/
+.alt{
+    font-weight: bold;
+}
+.alt[q="also"]{
+    display: block;
+}
+.z_a{
+    font-weight: normal;
+	padding-right:5px;
+}
+.z{
+    font-weight: normal;
+}
+/*词条释义*/
+.sd{
+    display: block;
+    margin-top: 8px;
+    font-size: 110%;
+    font-weight: bold;
+    color: #C76E06;
+    border-bottom: 1px solid #e8c49a;
+}
+.cf{
+    font-weight: bold;
+}
+.cf[display="block"]{
+    font-weight: bold;
+    display: block;
+}
+.cf .swung-dash{
+    margin-right: .4em;
+}
+.n-g{
+    display: block;
+}
+.z_n{
+display:table-cell;float:left;margin-right:5px;width:16px;height:16px;border-radius:10px;font-size:smaller;font-weight:bold;color:#FAFAFA;text-align:center;background:darkred;}   
+}
+
+.gr{
+    color: #004AAC; 
+}
+.x-g{
+    display: block; padding-left: 16px;
+}
+.x{color:teal;/*#1693A5;*/}
+
+.tx, chn{font-family: "Hiragino Sans GB W3", "冬青黑体简体中文 W3", "Hiragino Sans GB", "冬青黑体", "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+.tx{color: #666;}
+
+.label-g{
+    color: #004AAC;
+}
+.sense-g{
+	display:block;
+    color: #004AAC;
+}
+
+
+.pvs-g .z .revout, .ids-g .revout, .xr-g .revout{
+    display: table-cell; /* keep the background color wrapped tight */
+    margin: 5px auto 0px auto; /* keep the block centered */
+	position: relative;
+    bottom: 16px;
+	background-color: #C76E06;
+	color: #FAFAFA;
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size:smaller;
+	padding: 1px 3px;
+	border-radius: 5px;
+}
+.pv, .id {font-weight: bold;}
+}
+.pvs-g, .pv-g, .sense-g, .d{
+    color: #000;
+}
+
+.def-g {padding-left:8px; color:#555555;}
+
+.pvs-g
+{margin:10px 5px;}
+
+/*see alse*/
+.xr-g[level="2"]{
+    display: block;
+    margin: 10px 24px;
+    padding: 5px 10px;
+    border: 1px solid #e8c49a;
+    border-radius: 5px;
+}
+.xr-g {
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 0px 5px;
+    border: 1px solid #e8c49a;
+    border-radius: 5px;
+}
+.xr-g[xt="id"]{
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 0px 5px;
+    border: 1px solid #e8c49a;
+    border-radius: 5px;
+}
+.xr-g[xt="id"] .revout{display:none;}
+
+.Ref{
+    font-weight: bold;
+    color: #004AAC;
+}
+
+/*单词类型*/
+.block-g { 
+    display: block
+	margin-bottom:16px;
+}
+
+/*IDIOMS and Phrase block*/
+.ids-g, .pvs-g
+{
+    display: block;
+	margin-top:14px;
+    padding: 10px 10px;
+    border: 1px solid #e8c49a;
+    border-radius: 5px;
+}
+.id{
+    font-weight: bold;
+}
+
+/*底部*/
+.pracpron {display:none;}
+
+/*.pracpron .wd{
+    font-weight: bold;
+}
+.pracpron .ei-g{
+    margin-left: .1em;
+}*/
+.infl{
+    display: block;
+}
+.infl .inflection{
+    margin-right: .4em;
+	font-weight:bold;
+}
+.para
+{
+    display:block;
+	padding-left: 16px;
+}
+
+img.Media{
+    float: right;
+    margin: 0 0 10px 10px;
+	clear:both
+}
+.wordbox /* rounded box for word famly */
+{
+	display:block;
+	float:right;
+	margin-left:18px;
+	margin-right:18px;
+	padding: 5px 16px;
+	border-radius: 10px;
+	border-color:#C76E06;
+	border-style:ridge;
+	clear:both;
+}
+.word /* title of word family */
+{
+    display: table-cell; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the block centered */
+    background-color: #C76E06;
+	color: #FAFAFA;
+	font-weight: bold;
+	text-transform:uppercase;
+	padding: 1px 3px;
+	border-radius: 5px;
+}
+.wf-g {display: block;}
+.wf-g .pos-g {display:inline;}
+.wf-g .pos {display:inline;}
+.wfw {display:inline;}
+
+.unbox 
+{
+display:block;
+padding-left:36px;
+}
+.tab 
+{
+    display: table-cell;
+	background-color: #C76E06;
+	color: #FAFAFA;
+	font-weight: bold;
+	text-transform:uppercase;
+	text-align: left;
+	padding: 1px 3px;
+	border-radius: 5px;
+}
+.title {display:block; font-weight:bold;text-transform:uppercase;
+	font-size:small;}
+.collsubhead
+{font-weight:bold;}
+
+.table {display:table; margin:12px 0 8px 0;}
+.tr {display:table-row;}
+.td {display:table-cell;margin-right:10px;}
+.th {
+    display: table-cell; 
+	color: #C76E06;
+	font-weight: bold;
+	text-transform:uppercase;
+}
+
+ .althead /* title under Synonyms */
+{
+    font-weight: bold;
+	text-transform:uppercase;
+	font-size:small;
+	margin-top:14px;
+}
+.patterns /* rounded box for patterns */
+{
+	display:block;
+	margin-top:18px;
+	margin-left:-24px;
+	margin-right:18px;
+	border-radius: 10px;
+	border-color:#C76E06;
+	border-style:ridge;
+	clear:both;
+}
+
+.patterns .althead /* title of pattern */
+{
+    display: table-cell; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the block centered */
+    position: relative;
+    bottom: 10px;
+	left:20px;
+	background-color: #C76E06;
+	color: #FAFAFA;
+	font-weight: bold;
+	text-transform:uppercase;
+	padding: 1px 3px;
+	border-radius: 5px;
+}
+/* for phone only
+.patterns {width:320px;}
+.patterns .para {word-wrap:break-word;}
+*/
+.patterns .para {
+		 -ms-word-break: break-all;
+     word-break: break-all;
+     // Non standard for webkit
+     word-break: break-word;
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+.help {
+    display: block;
+}
+/*symbols class begin*/
+.symbols-coresym {
+    color:green;
+    display: inline-block;
+}
+.symbols-small_coresym {
+    color:green;
+    display: inline-block;
+    font-size: 70%;
+    position: relative;
+    top: -.1em;
+    margin-right: .15em;
+}
+.symbols-xsym{
+    color: rgb(180, 180, 180);
+    font-size: 55%;
+    top: -.25em;
+    position: relative;
+    margin-right: .25em;
+}
+.symbols-xrsym{
+    font-style: normal;
+    color: #555555;
+    margin-right: .25em;
+}
+.symbols-helpsym, .symbols-synsym, .symbols-awlsym, .symbols-oppsym, .symbols-etymsym, .symbols-notesym{
+    color: rgb(255, 255, 255);
+    background: rgb(183, 128, 50);
+    font-size: 65%;
+    padding: 1px 3px 2px;
+    display: inline-block;
+    margin: 0 .4em 0 0;
+    text-transform: uppercase;
+    top: -1px;
+    position: relative;
+    line-height: 1em;
+    border-radius: 1px;
+}
+.symbols-oppsym{
+    background: darkred;
+}
+.symbols-drsym{
+    font-style: normal;
+    font-size: 70%;
+    color: rgb(0, 0, 0);
+}
+.symbols-para_square{
+    color: rgb(80, 80, 80);
+    font-size: 65%;
+    position: relative;
+    top: -.2em;
+}
+.symbols-synsep{
+    color: rgb(80, 80, 80);
+    font-size: 65%;
+    position: relative;
+    top: -.2em;
+}
+.symbols-xsep{
+display:none;
+/*    color: rgb(90, 90, 90);
+    display: inline-block;
+    text-decoration: line-through; */
+}
+/*symbols class end*/
+ 
+/*单词隔开begin*/
+.def-g .d .dh, .def-g .d .ndv, .p-g .x-g .x .cl{
+    padding-right: 5px;
+    font-weight: bold;
+}
+.z_xr {padding-right:5px;}
+.unebi {padding-right:5px;font-weight: bold;}
+/*单词隔开end*/
+
+/*删除空格begin*/ 
+.gr + .def-g {margin-left:-5px;}
+/*删除空格end*/
+
+span#wx {text-decoration:line-through;}
+span#unwx {text-decoration:line-through;}
+
+/*
+.pv-g .swung-dash {color:#FAFAFA;}
+.pv-g .swung-dash::after {content: "~ "; color:#555555;}
+*/
+swung-dash {visibility: hidden;}
+swung-dash::after {visibility: visible;content: "\007E \0020";}
+
+.pv-g .swung-dash {visibility: hidden;}
+.pv-g .swung-dash::after {visibility: visible;content: "\007E \0020";}
+
+.infl {display:none;}
+
+

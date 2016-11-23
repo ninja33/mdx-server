@@ -1,13 +1,19 @@
 # -*- coding: utf-8 -*-
 # version: python 3.5
+
 import threading
 import re
 import os
 import sys
 
 
-from tkinter import *
-from tkinter import filedialog
+if sys.version_info < (3, 0, 0):
+    import Tkinter as tk
+    import tkFileDialog as filedialog
+else:
+    import tkinter as tk
+    import tkinter.filedialog as filedialog
+
 from wsgiref.simple_server import make_server
 from file_util import *
 from mdx_util import *
@@ -38,7 +44,15 @@ content_type_map = {
     'woff2': 'application/font-woff2',
 }
 
-resource_path = os.path.join(sys.path[0], 'mdx')
+try:
+    # PyInstaller creates a temp folder and stores path in _MEIPASS
+    #base_path = sys._MEIPASS
+    base_path = os.path.dirname(sys.executable)
+except Exception:
+    base_path = os.path.abspath(".")
+        
+resource_path = os.path.join(base_path, 'mdx')
+print("resouce path : " + resource_path)
 builder = None
 
 def get_url_map():
@@ -98,7 +112,7 @@ if __name__ == '__main__':
 
     # use GUI to select file, default to extract
     if not args.filename:
-        root = Tk()
+        root = tk.Tk()
         root.withdraw()
         args.filename = filedialog.askopenfilename(parent=root)
 

@@ -9,7 +9,7 @@ __pycache__/
 *.db
 
 # Manual
-manual/
+doc/
 
 # C extensions
 *.so
@@ -21,6 +21,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+.idea/
 eggs/
 .eggs/
 lib/
