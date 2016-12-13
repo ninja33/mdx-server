@@ -17,7 +17,7 @@ else:
 from wsgiref.simple_server import make_server
 from file_util import *
 from mdx_util import *
-from mdx_query import IndexBuilder
+from mdict_query import IndexBuilder
 
 """
 browser URL:
