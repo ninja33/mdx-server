@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # MDX, MDD and index DB
+/dicts
 *.mdx
 *.mdd
 *.db
