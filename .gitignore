@@ -12,6 +12,7 @@ __pycache__/
 
 # Manual
 doc/
+manual/
 
 # C extensions
 *.so
