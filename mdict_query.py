@@ -295,7 +295,7 @@ class IndexBuilder(object):
 
     def mdx_lookup(self, keyword):
         conn = sqlite3.connect(self._mdx_db)
-        cursor = conn.execute("SELECT * FROM MDX_INDEX WHERE key_text = " + "\"" + keyword + "\"")
+        cursor = conn.execute("SELECT * FROM MDX_INDEX WHERE lower(key_text) = " + "\"" + keyword.lower() + "\"")
         lookup_result_list = []
         mdx_file = open(self._mdx_file,'rb')
         for result in cursor:
