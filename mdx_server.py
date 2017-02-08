@@ -7,12 +7,6 @@ import os
 import sys
 
 
-if sys.version_info < (3, 0, 0):
-    import Tkinter as tk
-    import tkFileDialog as filedialog
-else:
-    import tkinter as tk
-    import tkinter.filedialog as filedialog
 
 from wsgiref.simple_server import make_server
 from file_util import *
@@ -53,7 +47,7 @@ except Exception:
         
 resource_path = os.path.join(base_path, 'mdx')
 print("resouce path : " + resource_path)
-builder = None
+builders = []
 
 def get_url_map():
     result = {}
@@ -86,10 +80,10 @@ def application(environ, start_response):
     elif file_util_get_ext(path_info) in content_type_map:
         content_type = content_type_map.get(file_util_get_ext(path_info), 'text/html; charset=utf-8')
         start_response('200 OK', [('Content-Type', content_type)])
-        return get_definition_mdd(path_info, builder)
+        return get_definitions_mdd(path_info, builders)
     else:
         start_response('200 OK', [('Content-Type', 'text/html; charset=utf-8')])
-        return get_definition_mdx(path_info[1:], builder)
+        return get_definitions_mdx(path_info[1:], builders)
 
 
     start_response('200 OK', [('Content-Type', 'text/html; charset=utf-8')])
@@ -107,18 +101,24 @@ def loop():
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("filename", nargs='?', help="mdx file name")
+    parser.add_argument("filenames", nargs='*', help="mdx file name")
     args = parser.parse_args()
 
     # use GUI to select file, default to extract
-    if not args.filename:
+    if not args.filenames:
+        if sys.version_info < (3, 0, 0):
+            import Tkinter as tk
+            import tkFileDialog as filedialog
+        else:
+            import tkinter as tk
+            import tkinter.filedialog as filedialog
         root = tk.Tk()
         root.withdraw()
-        args.filename = filedialog.askopenfilename(parent=root)
+        args.filenames = filedialog.askopenfilename(parent=root)
 
-    if not os.path.exists(args.filename):
+    if not all((os.path.exists(filename) for filename in args.filenames)):
         print("Please specify a valid MDX/MDD file")
     else:
-        builder = IndexBuilder(args.filename)
+        builders = list((IndexBuilder(file) for file in  args.filenames))
         t = threading.Thread(target=loop, args=())
         t.start()
