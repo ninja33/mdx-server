@@ -197,7 +197,6 @@ class IndexBuilder(object):
         self._title = meta['title']
         self._description = meta['description']
 
-
     def _make_mdd_index(self, db_name):
         if os.path.exists(db_name):
             os.remove(db_name)

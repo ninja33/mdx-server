@@ -55,6 +55,7 @@ resource_path = os.path.join(base_path, 'mdx')
 print("resouce path : " + resource_path)
 builder = None
 
+
 def get_url_map():
     result = {}
     files = []
@@ -103,6 +104,7 @@ def loop():
     print("Serving HTTP on port 8000...")
     # 开始监听HTTP请求:
     httpd.serve_forever()
+
 
 if __name__ == '__main__':
     import argparse
